@@ -3,7 +3,7 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    render json: { job: @job }
+    render json: { job: @job } if @job.save
   end
 
   def show
@@ -25,6 +25,7 @@ class JobsController < ApplicationController
       :job_title,
       :job_description,
       :year_of_experience,
+      :education_requirement,
       :industry,
       :base_salary,
       :employment_type_id
