@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get '/', to: 'static_pages#index'
+  get '/' => 'static_pages#index'
 
-  post '/jobs', to: 'jobs#create'
-  get '/jobs/:id', to: 'jobs#show'
-  get '/jobs', to: 'jobs#index'
+  post '/jobs' => 'jobs#create'
+  get '/jobs/:id' => 'jobs#show'
+  get '/jobs' => 'jobs#index'
 end
